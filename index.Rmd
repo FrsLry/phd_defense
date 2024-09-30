@@ -1,0 +1,616 @@
+---
+title: "PhD defense"
+subtitle: "Spatial scaling and decomposition of macroecological changes"
+author: "<br>**PhD candidate:** François Leroy<br>**Supervisor:** Petr Keil <br><br><br>**Opponents:**<br>Dr. David Hořák<br>Dr. Martin Bulla<br>Prof. Vladimír Remeš"
+date: "2024-10-02"
+institute: "<br><br>Czech University of Life Sciences,<br>Prague"
+output:
+  xaringan::moon_reader:
+    seal: true ## for the title slide
+    self_contained: true  ## otherwise you need the entire folder to see the slides correctly
+    yolo: false
+    css: ["css_template/middlebury.css", "css_template/tamu-fonts.css"] ## Note that if you don't specify the .css after the file name here, xaringan will import and renew the template at each run in ./libs/remark-css/
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [top, left, inverse]
+bibliograhy: references.bib
+---
+
+```{r, echo=F}
+knitr::opts_chunk$set(message = F, 
+                      warning = F,
+                      echo = F)
+```
+
+# Biodiversity crisis
+
+* Biodiversity has been undergoing significant changes mainly due to increase and acceleration of human activities
+
+* Acceleration of species extinction: the current rate of extinction is estimated between 10s to 100s times higher than the background rate
+
+* Collapse of species abundance
+
+* Road to the sixth mass extinction
+
+.pull-left[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/barnosky.JPG")
+```
+
+]
+
+.pull-right[
+
+```{r, out.width="200%"}
+knitr::include_graphics("images/LPI.png")
+```
+
+]
+
+.footnote[Barnosky *et al.*, 2011; Living Planet Index]
+
+---
+
+# Influence of spatial scale
+
+* Local, regional, and global trends of biodiversity are disconnected
+
+* There is still no consensus about biodiversity changes across scales
+
+.center[
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/Fig1_intro.png")
+```
+
+]
+
+---
+
+# Influence of spatial scale
+
+* This is because biodiversity and scales are tightly interconnected
+
+<br><br>
+
+.center[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/Fig2_intro.jpg")
+```
+
+]
+
+---
+
+# Decomposition of biodiversity changes
+
+* Changes in biodiversity can be decomposed into underlying mechanisms:
+
+$\mathbf{\Rightarrow}$ **Species richness change into colonization and extinction**
+
+$\mathbf{\Rightarrow}$ **Abundance change into recruitment and loss**
+
+* From a conservation perspective, it is important to know the influence of those underlying mechanisms and how they are influenced by scale
+
+<br>
+
+.center[
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/Fig3_intro.png")
+```
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Influence of spatial scaling on macroecological changes and their decomposition into underlying processes
+
+---
+
+# Chapters
+
+<br><br>
+
+* **Chapter I: ** How has bird biodiversity changed over time? A review across spatio-temporal scales (*Basic and Applied Ecology*)
+
+* **Chapter II: ** Decomposing biodiversity change to processes of extinction, colonization, and recurrence across scales (*Ecography*)
+
+* **Chapter III: ** Should regional species loss be faster, or slower, than local loss? It depends on density-dependent rate of death (*in review*)
+
+* **Chapter IV: ** Acceleration and demographic rates of bird decline in North America (*in review*)
+
+---
+
+class: inverse, center, middle
+
+# Chapter I
+
+## How has bird biodiversity changed over time? A review across spatio-temporal scales
+
+.center[
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/chapt1.JPG")
+```
+
+
+]
+
+---
+
+# Chapter I: Context
+
+.pull-left[
+
+* Literature review on the influence of spatio-temporal scales on the change in incidence-based biodiversity metrics
+
+* Following an exercise to better understand the literature on this topic
+
+]
+
+.pull-right[
+
+* Summarizing 24 studies and 59 trends of 12 metrics of biodiversity
+
+* Focusing on analysis reporting average trend over spatial grains
+
+* Spatial grains ranging from 267 Km² to the global land surface, from *ca.* 1900 to 2010
+
+]
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/chapt1_fig2.JPG")
+```
+
+---
+
+# Chapter I: Results
+
+* Scale dependence of changes in species richness, functional diversity, and temporal $\beta$-diversity
+
+* Species richness and functional diversity decrease at global scale, increase at regional scales, and no trend at local scales
+
+* Temporal dissimilarity decreases with increasing grain size
+
+
+.center[
+
+```{r, out.width="60%"}
+knitr::include_graphics("images/chapt1_fig3.jpg")
+```
+
+]
+
+---
+
+# Chapter I: Discussion
+
+* Challenges of assessing spatial and temporal cross-scale changes due to lack of clear definitions
+
+* Importance of assessing changes at different scales: local for conservation and global to understand the biodiversity crisis
+
+* Understanding that there is no "correct" trend, but rather that biodiversity can show different trends at different scales
+
+.center[
+
+```{r, out.width="85%"}
+knitr::include_graphics("images/chapt1_fig1.jpg")
+```
+
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Chapter II
+
+## Decomposing biodiversity change to processes of extinction,colonization, and recurrence across scales
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/chapt2.JPG")
+```
+
+
+---
+
+# Chapter II: Context
+
+* Linking theoretical scenarios to empirical analysis on the spatial scaling of biodiversity changes
+
+* Decomposition of species richness change into colonization and extinction across scales
+
+* Birds of Czechia (Czech breeding bird atlases and Czech Breeding Bird Survey)
+
+* From 1985 to 2017 / From local (30 000 m²) to national scale
+
+* Using Machine Learning methods to control for heterogeneity in the datasets (sampling effort, spatio-temporal grains)
+
+<br>
+
+.center[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/chapt2_maps_cz.jpg")
+```
+
+]
+
+---
+
+# Chapter II: Theory
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/chapt2_Fig2.jpg")
+```
+
+---
+
+# Chapter II: Results
+
+.center[
+
+```{r, out.width="50%"}
+knitr::include_graphics("images/chapt2_Fig3.jpg")
+```
+
+]
+
+---
+
+# Chapter II: Results
+
+
+.center[
+
+```{r, out.width="50%"}
+knitr::include_graphics("images/chapt2_Fig4.jpg")
+```
+
+]
+
+---
+
+# Chapter II: Discussion
+
+* We bring insights on this topic by showing the scale dependence of underlying processes behind species richness change hump-shape pattern of extinction
+
+.pull-left[
+
+**Increase of colonization with scale:** scenario of colonization by external species pool
+
+]
+
+.pull-right[
+
+**Hump-shape pattern of extinction:** range contraction of rare species at local scales and of common species at large scales
+
+]
+
+* Scaling patterns seem to be constant through time
+
+* The difference in the scaling magnitude is due to change in colonization scaling pattern
+
+```{r}
+knitr::include_graphics("images/chapt2_Fig5.jpg")
+```
+
+---
+
+class: inverse, center, middle
+
+# Chapter III
+
+## Should regional species loss be faster, or slower, than local loss? It depends on density-dependent rate of death
+
+### *Petr Keil, Adam T. Clark, Vojtěch Barták, François Leroy*
+
+### *(in review)*
+
+---
+
+# Chapter III: Context
+
+* Following results of **Chapter II** and previous work of Petr Keil
+
+* We wanted to better understand the processes behind the scaling of extinction
+
+* We used 2 simulation frameworks to study the influence of different density-dependence scenario (and few other parameters) on the scaling of extinction (probability and number of extinction)
+
+.center[
+
+**2 hypothesis**
+
+```{r, out.width="60%"}
+knitr::include_graphics("images/chapt3_hyp1.JPG")
+```
+
+
+
+]
+
+---
+
+# Chapter III: Results
+
+.pull-left[
+
+.center[
+
+**Point Pattern simulations**
+
+(one time loss event)
+
+]
+
+]
+
+.pull-right[
+
+.center[
+
+**Lotka-Voltera simulations**
+
+(long-term)
+
+]
+
+]
+
+.center[
+
+```{r}
+knitr::include_graphics("images/chapt3_beta_vs_scaling.jpg")
+```
+
+]
+
+---
+
+# Chapter III: Discussion
+
+* Rarity and density-dependence drive the scaling of extinction probability
+
+* Positive scaling can be found only under Allee effect (hypothesis 1), uneven Species Abundance Distribution (SAD), and a one-time loss event (simulation 1)
+
+* A negative scaling of extinction is the most common pattern (hypothesis 2)
+
+* This is because, in the long-term simulations, the probability of extinction tends to eliminate rare or common species, leading to an even SAD and negative scaling of extinction probability
+
+* The scaling of the number of extinction is more variable and depends also on factors affecting the Species-Area relationship (i.e. number of species and intra-specific aggregation)
+
+---
+
+class: inverse, center, middle
+
+# Chapter IV
+
+## Acceleration and demographic rates of bird abundance decline in North America
+
+### *François Leroy, Marta A. Jarzyna, Petr Keil*
+
+### *(in review)*
+
+---
+
+# Chapter IV: Context
+
+* In the context of the great acceleration and acceleration of species extinction, is the decline in species abundance also accelerating?
+
+* Also, changes in abundance arises from a complex interaction between loss and recruitment of individuals
+
+* From a conservation perspective, knowing which process is the most important can be critical for conservation policies
+
+.center[
+
+```{r, out.width="55%"}
+knitr::include_graphics("images/chapt4_Fig1.jpg")
+```
+
+]
+
+---
+
+# Chapter IV: Results
+
+.center[
+
+**Continental decline of bird abundance**
+
+]
+
+.center[
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/chapt4_Fig2.jpg")
+```
+
+
+]
+
+---
+
+# Chapter IV: Results
+
+.center[
+
+**Decline acceleration hot-spots**
+
+<br><br>
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/chapt4_deltag.jpg")
+```
+
+
+]
+
+---
+
+# Chapter IV: Results
+
+.center[
+
+**Changes in recruitment and loss rates**
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/chapt4_deltarl.jpg")
+```
+
+]
+
+---
+
+# Chapter IV: Results
+
+.center[
+
+**Main process between recruitment and loss rates**
+
+```{r, out.width="85%"}
+knitr::include_graphics("images/chapt4_Fig4.jpg")
+```
+
+
+]
+
+---
+
+# Chapter IV: Results
+
+.center[
+
+**Per species/family/habitat analysis**
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/chapt4_Fig5.jpg")
+```
+
+
+]
+
+---
+
+# Chapter IV: Discussion
+
+* Confirming continental decline of bird abundance
+
+* Highlighting regional hot-spots of acceleration in Midwest, Midatlantic and California
+
+* Decline in recruitment rate in Midatlantic region, and increase in loss rate in Midwest and California
+
+* 65% of species and 95% of families with increasing abundance are experiencing a decline in recruitment rate
+
+* Conservation efforts should also be targeted towards seemingly thriving species and not only on loss, but also on recruitment
+
+---
+
+class: inverse, center, middle
+
+# Discussion/Conclusion
+
+---
+
+# Biodiversity trends across scales and its decomposition
+
+* We emphasize the importance of considering the scale when assessing biodiversity changes (e.g. global decline vs. local increase, **Chapter I**)
+
+* One can not simply extrapolate biodiversity changes from one scale to another (**Chapter I** and **II**)
+
+* We bring explanations on the scaling of biodiversity changes by decomposing them into colonization/recruitment and extinction/loss (**Chapter II** and **IV**)
+
+* We also provide ecological processes behind the spatial scaling of extinction (**Chapter III**)
+
+* From a conservation perspective, decomposing biodiversity changes can be truly helpful (**Chapter II**, **III**, and **IV**)
+
+---
+
+class: inverse, center, middle
+
+# Acknowledgments
+
+.pull-left[
+
+<br>
+
+### Petr Keil
+
+<br>
+
+```{r, out.width="45%"}
+knitr::include_graphics("images/petr_keil.jpg")
+```
+
+]
+
+.pull-right[
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/mobi-lab-logo-white-rgb.png")
+```
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/mobi_team.png")
+```
+
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Acknowledgments
+
+.pull-left[
+
+<br>
+
+### Department of spatial sciences
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/dpt_team.png")
+```
+
+... (many more but I couldn't find pictures !)
+
+]
+
+.pull-right[
+
+<br>
+
+### And for their support during this journey
+
+<br><br>
+
+My parents, my sister, my partner, and my friends...
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Thank you for your attention
+
+.pull-left[
+`r icons::icon_style(icons::fontawesome$regular$envelope, scale = 1, fill = "white")` leroy@fzp.czu.cz
+]
+
+.pull-right[
+`r icons::icon_style(icons::fontawesome$brands$twitter, scale = 2, fill = "lightblue")` @FrsLry
+]
+
+.center[
+`r icons::icon_style(icons::fontawesome$brands$github, scale = 2, fill = "white")` FrsLry
+]
